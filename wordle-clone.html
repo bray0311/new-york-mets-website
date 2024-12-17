@@ -98,5 +98,83 @@
         const message = document.getElementById("message");
         const keyboard = document.getElementById("keyboard");
 
-        // Create the game board dynamically
-      
+        function createBoard() {
+            for (let i = 0; i < maxGuesses * 5; i++) {
+                const tile = document.createElement("div");
+                tile.classList.add("tile");
+                tile.id = `tile-${i}`;
+                board.appendChild(tile);
+            }
+        }
+
+        function createKeyboard() {
+            const keys = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            keys.forEach((key) => {
+                const keyButton = document.createElement("div");
+                keyButton.classList.add("key");
+                keyButton.textContent = key;
+                keyButton.onclick = () => addLetter(key.toLowerCase());
+                keyboard.appendChild(keyButton);
+            });
+        }
+
+        function addLetter(letter) {
+            if (currentGuess.length < 5) {
+                currentGuess += letter;
+                updateBoard();
+            }
+        }
+
+        function updateBoard() {
+            const startIndex = guesses.length * 5;
+            for (let i = 0; i < 5; i++) {
+                const tile = document.getElementById(`tile-${startIndex + i}`);
+                tile.textContent = currentGuess[i] || "";
+            }
+        }
+
+        function checkGuess() {
+            if (currentGuess.length !== 5) {
+                message.textContent = "Word must be 5 letters!";
+                return;
+            }
+
+            const startIndex = guesses.length * 5;
+            for (let i = 0; i < 5; i++) {
+                const tile = document.getElementById(`tile-${startIndex + i}`);
+                if (currentGuess[i] === solution[i]) {
+                    tile.classList.add("correct");
+                } else if (solution.includes(currentGuess[i])) {
+                    tile.classList.add("present");
+                } else {
+                    tile.classList.add("absent");
+                }
+            }
+
+            guesses.push(currentGuess);
+
+            if (currentGuess === solution) {
+                message.textContent = "🎉 You guessed the word!";
+                keyboard.innerHTML = "";
+            } else if (guesses.length === maxGuesses) {
+                message.textContent = `Game over! The word was: ${solution.toUpperCase()}`;
+                keyboard.innerHTML = "";
+            } else {
+                currentGuess = "";
+            }
+        }
+
+        document.addEventListener("keydown", (e) => {
+            if (/^[a-zA-Z]$/.test(e.key)) addLetter(e.key.toLowerCase());
+            else if (e.key === "Enter") checkGuess();
+            else if (e.key === "Backspace") {
+                currentGuess = currentGuess.slice(0, -1);
+                updateBoard();
+            }
+        });
+
+        createBoard();
+        createKeyboard();
+    </script>
+</body>
+</html>
