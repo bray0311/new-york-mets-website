@@ -5,9 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scratch Page</title>
     <link rel="stylesheet" href="styles/custom.css">
+    <style>
+        /* Inline CSS for quick fixes (can move to custom.css later) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h3 {
+            color: #004080;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        ol, ul {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 10px;
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #004080;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: none;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #004080;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ff4500;
+        }
+    </style>
 </head>
 <body>
-    <h1>From-Scratch Page</h1>
+    <!-- Page Title -->
+    <h1>Scratch Page</h1>
 
     <!-- Ordered list with unordered list -->
     <ol>
@@ -15,21 +67,24 @@
             <ul>
                 <li>Founded: 1962</li>
                 <li>World Series Wins: 2</li>
+                <li>Stadium: Citi Field</li>
             </ul>
         </li>
     </ol>
 
     <!-- Image -->
-    <img src="mets-logo.jpg" alt="New York Mets Logo" width="200">
+    <h3>New York Mets Logo</h3>
+    <img src="images/mets-logo.jpg" alt="New York Mets Logo">
 
-    <!-- YouTube Video -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+    <!-- Embedded YouTube Video -->
+    <h3>Team Highlights</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
 
-    <!-- Anchor -->
+    <!-- Anchor Link -->
     <a href="#stats">Jump to Stats</a>
-    <h3 id="stats">Team Stats Section</h3>
 
-    <!-- Tableau Graph -->
-    <div class="tableauPlaceholder" id="viz"></div>
+    <!-- Stats Section -->
+    <h3 id="stats">Team Stats Section</h3>
+    <p style="text-align: center;">Here are the current stats and achievements for the New York Mets.</p>
 </body>
 </html>
