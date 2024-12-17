@@ -4,61 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scratch Page</title>
-    <link rel="stylesheet" href="styles/custom.css"> <!-- Link to custom CSS -->
+    <!-- Link to Custom CSS -->
+    <link rel="stylesheet" href="styles/custom.css">
+    <!-- Inline CSS for Quick Styling -->
     <style>
-        /* Inline CSS for quick formatting */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+        /* Reset browser defaults */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
             color: #333;
+            padding: 20px;
         }
 
         h1, h3 {
             text-align: center;
             color: #004080;
-            margin-top: 20px;
+            margin: 20px 0;
         }
 
+        /* List Styling */
         ol, ul {
             margin: 20px auto;
             max-width: 600px;
-            padding: 10px;
-            background: #f1f1f1;
+            padding: 15px;
+            background-color: #f1f1f1;
             border: 1px solid #ccc;
             border-radius: 5px;
+            list-style-position: inside;
         }
 
+        /* Image Styling */
         img {
             display: block;
             margin: 20px auto;
             max-width: 300px;
-            height: auto;
             border: 2px solid #004080;
+            border-radius: 5px;
         }
 
+        /* YouTube Embed */
         iframe {
             display: block;
             margin: 20px auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
         }
 
+        /* Links */
         a {
             display: block;
             text-align: center;
-            font-weight: bold;
+            margin-top: 20px;
+            font-size: 1.2rem;
             text-decoration: none;
             color: #004080;
-            margin-top: 10px;
+            font-weight: bold;
         }
 
         a:hover {
             color: #ff4500;
         }
 
+        /* Section Styling */
         .section {
-            margin: 20px auto;
+            margin: 30px auto;
             text-align: center;
+            padding: 15px;
+            max-width: 800px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -66,50 +89,49 @@
     <!-- Page Title -->
     <h1>Scratch Page</h1>
 
-    <!-- Ordered List with Embedded Unordered List -->
-    <h3>New York Mets Stats</h3>
-    <ol>
-        <li>Team Information:
-            <ul>
-                <li>Founded: 1962</li>
-                <li>World Series Wins: 2</li>
-                <li>Stadium: Citi Field</li>
-            </ul>
-        </li>
-    </ol>
+    <!-- Section: Team Stats -->
+    <div class="section">
+        <h3>New York Mets Stats</h3>
+        <ol>
+            <li>Team Information:
+                <ul>
+                    <li>Founded: 1962</li>
+                    <li>World Series Wins: 2</li>
+                    <li>Stadium: Citi Field</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
 
-    <!-- Image Section -->
+    <!-- Section: Team Image -->
     <div class="section">
         <h3>New York Mets Logo</h3>
         <img src="images/mets-logo.jpg" alt="New York Mets Logo">
     </div>
 
-    <!-- Embedded YouTube Video -->
+    <!-- Section: YouTube Video -->
     <div class="section">
         <h3>Team Highlights</h3>
         <iframe width="560" height="315" 
                 src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                title="YouTube video player" 
+                title="New York Mets Highlights" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
         </iframe>
     </div>
 
-    <!-- Link to Wordle Game -->
+    <!-- Section: Wordle Link -->
     <div class="section">
         <h3>Play the Wordle Clone Game</h3>
         <p>Test your guessing skills with this interactive Wordle game!</p>
         <a href="wordle-clone.html" target="_blank">Click here to play the Wordle Clone Game</a>
     </div>
 
-    <!-- Anchor Link to Stats Section -->
-    <a href="#stats">Jump to Stats Section</a>
-
-    <!-- Stats Section -->
-    <div class="section" id="stats">
-        <h3>Current Stats Section</h3>
-        <p>The New York Mets continue to perform at a high level in the MLB with strong players and a dedicated fanbase.</p>
+    <!-- Anchor Link -->
+    <div class="section">
+        <a href="#stats">Jump to Team Stats</a>
     </div>
+
 </body>
 </html>
