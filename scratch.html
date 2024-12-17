@@ -4,26 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scratch Page</title>
-    <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="styles/custom.css"> <!-- Link to custom CSS -->
+    <style>
+        /* Inline CSS for quick formatting */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1, h3 {
+            text-align: center;
+            color: #004080;
+            margin-top: 20px;
+        }
+
+        ol, ul {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 10px;
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #004080;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            color: #004080;
+            margin-top: 10px;
+        }
+
+        a:hover {
+            color: #ff4500;
+        }
+
+        .section {
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">New York Mets</a>
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-        <li class="nav-item"><a class="nav-link" href="scratch.html">Scratch Page</a></li>
-        <li class="nav-item"><a class="nav-link" href="graduate.html">Graduate Page</a></li>
-        <li class="nav-item"><a class="nav-link" href="wordle-clone.html">Wordle Game</a></li>
-    </ul>
-</nav>
-
     <!-- Page Title -->
     <h1>Scratch Page</h1>
 
-    <!-- Ordered list with unordered list -->
+    <!-- Ordered List with Embedded Unordered List -->
+    <h3>New York Mets Stats</h3>
     <ol>
-        <li>New York Mets Stats:
+        <li>Team Information:
             <ul>
                 <li>Founded: 1962</li>
                 <li>World Series Wins: 2</li>
@@ -32,24 +78,38 @@
         </li>
     </ol>
 
-    <!-- Image -->
-    <h3>New York Mets Logo</h3>
-    <img src="images/mets-logo.jpg" alt="New York Mets Logo" width="300">
+    <!-- Image Section -->
+    <div class="section">
+        <h3>New York Mets Logo</h3>
+        <img src="images/mets-logo.jpg" alt="New York Mets Logo">
+    </div>
 
     <!-- Embedded YouTube Video -->
-    <h3>Team Highlights</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+    <div class="section">
+        <h3>Team Highlights</h3>
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
 
-    <!-- Anchor Link -->
-    <a href="#stats">Jump to Stats</a>
+    <!-- Link to Wordle Game -->
+    <div class="section">
+        <h3>Play the Wordle Clone Game</h3>
+        <p>Test your guessing skills with this interactive Wordle game!</p>
+        <a href="wordle-clone.html" target="_blank">Click here to play the Wordle Clone Game</a>
+    </div>
 
-    <!-- Wordle Clone Link -->
-    <h3>Play a Wordle Clone Game</h3>
-    <p>Test your guessing skills with this interactive Wordle clone game!</p>
-    <a href="wordle-clone.html" target="_blank">Play the Wordle Game</a>
+    <!-- Anchor Link to Stats Section -->
+    <a href="#stats">Jump to Stats Section</a>
 
     <!-- Stats Section -->
-    <h3 id="stats">Team Stats Section</h3>
-    <p style="text-align: center;">Here are the current stats and achievements for the New York Mets.</p>
+    <div class="section" id="stats">
+        <h3>Current Stats Section</h3>
+        <p>The New York Mets continue to perform at a high level in the MLB with strong players and a dedicated fanbase.</p>
+    </div>
 </body>
 </html>
