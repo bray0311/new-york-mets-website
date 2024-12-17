@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Generator</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Riddle Generator</h1>
+    <p id="riddle">Press the button to see a riddle!</p>
+    <button onclick="generateRiddle()">Generate Riddle</button>
+
+    <script>
+        const riddles = [
+            "What has to be broken before you can use it? - An egg.",
+            "I'm tall when I'm young, and I'm short when I'm old. - A candle.",
+            "What is full of holes but still holds water? - A sponge."
+        ];
+
+        function generateRiddle() {
+            const riddle = riddles[Math.floor(Math.random() * riddles.length)];
+            document.getElementById("riddle").innerText = riddle;
+        }
+    </script>
+</body>
+</html>

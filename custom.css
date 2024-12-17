@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h3 {
+    color: #004080;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+}
